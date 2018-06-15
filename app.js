@@ -5,11 +5,11 @@ const path = require = require('path');
 // app init
 const app = express();
 
-const publicPath = path.join(__dirname, ('./public'));
+const publicPath = path.join(__dirname, ('public'));
 
 const port = process.env.PORT || 3000;
 
-app.use(express.static(publicPath));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(port, () => {
     console.log("Server is running");
